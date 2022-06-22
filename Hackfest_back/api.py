@@ -20,7 +20,7 @@ def giveInfo():
                 'facility':'x-ray',
             }
         
-        gdf = ox.geometries.geometries_from_point((lng,lat), tags, dist=5000).head(10)   # find the hospital around 5km       
+        gdf = ox.geometries.geometries_from_point((lng,lat), tags, dist=5000).head(20)   # find the hospital around 5km       
         file = gdf.to_json()
         return jsonify({
             "file": file
